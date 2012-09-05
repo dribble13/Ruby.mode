@@ -8,7 +8,7 @@
     </blocks>
     
     <symbol id="Defs With Args" image="SymbolF()" indentation="1" ignoreblocks="yes" useforautocomplete="yes">
-        <regex>(?&lt;=[^[_A-Za-z0-9]]|^)def\s+(?'name'[\w_]+\??\s*\((?'arguments'[^)]*)\))[\r\n]+</regex>
+        <regex>(?&lt;=[^[_A-Za-z0-9]]|^)def\s+(?'name'[\w_]+[\?\!]?\s*\((?'arguments'[^)]*)\))[\r\n]+</regex>
         <postprocess>
         	<find>\s+</find>
         	<replace> </replace>
@@ -19,7 +19,7 @@
     </symbol>
     
      <symbol id="Defs With No Args" image="SymbolF()" indentation="1" ignoreblocks="yes" useforautocomplete="yes">
-        <regex>(?&lt;=[^[_A-Za-z0-9]]|^)def\s+(?'name'[\w_]+\??)\s*[\r\n]+</regex>
+        <regex>(?&lt;=[^[_A-Za-z0-9]]|^)def\s+(?'name'[\w_]+[\?\!]?)\s*[\r\n]+</regex>
         <postprocess>
         	<find>\s+</find>
         	<replace> </replace>
@@ -31,7 +31,7 @@
     </symbol>
 
 	<symbol id="Class Method" image="SymbolF" indentation="1" ignoreblocks="yes">
-        <regex>(?&lt;=[^[_A-Za-z0-9]]|^)def\s+(?'name'self.[\w_]+\??\s*(\((?'arguments'[^)]*)\)))?[\r\n]+</regex>
+        <regex>(?&lt;=[^[_A-Za-z0-9]]|^)def\s+(?'name'self.[\w_]+[\?\!]?\s*(\((?'arguments'[^)]*)\)))?[\r\n]+</regex>
         <postprocess>
         	<find>\s+</find>
         	<replace> </replace>
